@@ -35,7 +35,7 @@ User.findById(id).then((user)=>{
         return console.log('User not found');
     }
     console.log('UserEmail By ID', user.email);
-}).catch((e)=>{
+}, (e)=>{
     console.log(e);
 });
 
