@@ -56,6 +56,19 @@ UserSchema.methods.generateAuthToken = function() {
     });
 };
 
+UserSchema.methods.removeToken = function(token) {
+    var user = this;
+
+    //MongoDB $pull Method is used to Pull Data from Arrays
+    return user.update({
+            $pull:{
+                tokens:{
+                    token: token
+                }
+            }
+        });  
+};
+
 UserSchema.statics.findByToken = function (token) {
     var User = this;
     var decoded;
