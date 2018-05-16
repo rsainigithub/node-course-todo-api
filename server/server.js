@@ -166,7 +166,7 @@ app.patch('/todos/:id', authenticate, (req, res)=>{
     var body = _.pick(req.body, ['text', 'completed']);
     
     if(!ObjectID.isValid(id)) {
-        return res.status(404).send('Invalid ID value');
+        return res.status(404).send('Invalid ID Value');
     }
 
     if (_.isBoolean(body.completed) && body.completed){
