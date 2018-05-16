@@ -10,21 +10,26 @@ var password = '123abc!';
 //     })
 // });
 
-var hashedPwd = '$2a$10$Wn9kg4ip7JXeObq6F.4K3epRfp8p2t4054dM7QeFBs96Cza1jAfaW';
+// var hashedPwd = '$2a$10$Wn9kg4ip7JXeObq6F.4K3epRfp8p2t4054dM7QeFBs96Cza1jAfaW';
 
-bcrypt.compare(password, hashedPwd, (err, res)=>{
-    console.log(res);
-});
+// bcrypt.compare(password, hashedPwd, (err, res)=>{
+//     console.log(res);
+// });
 
-// var data = {
-//     id: 10
-// }
+var data = {
+    id: 10
+}
 
-// var token = jwt.sign(data, '123abc');
-// console.log(token);
+var token = jwt.sign(data, '123abc');
+console.log(token);
 
-// var decoded = jwt.verify(token, '123abc');
-// console.log('decoded', decoded);
+console.log('**************');
+var token1 = jwt.sign(data, '123abc');
+console.log(token1);
+
+console.log('**************');
+var decoded = jwt.verify(token, '123abc');
+console.log('decoded', decoded);
 
 // var message = 'I am user number 1';
 // var hash = SHA256(message).toString();
