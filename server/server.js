@@ -1,3 +1,4 @@
+//MAIN STARTING POINT
 require('./config/config.js');
 
 const {ObjectID} = require('mongodb');
